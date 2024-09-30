@@ -4,52 +4,104 @@
   <meta charset="UTF-8">
   <title>Your Name | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation -->
   <header>
-    <h1>Your Name</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#work">Work Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo"><a href="#">Your Name</a></h1>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#work" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Write a brief introduction about yourself.</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <h2>Welcome to My Portfolio</h2>
+      <p>I'm a [Your Profession], specializing in [Your Specialization].</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
   </section>
 
-  <section id="work">
-    <h2>Work Experience</h2>
-    <ul>
-      <li><strong>Company A</strong> - Role (Year-Year)</li>
-      <li><strong>Company B</strong> - Role (Year-Year)</li>
-      <!-- Add more experiences -->
-    </ul>
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="images/profile.jpg" alt="Your Photo">
+        <p>Write a detailed introduction about yourself, your passions, and your career goals.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/your-username/project1">Project 1</a> - Brief description.</li>
-      <li><a href="https://github.com/your-username/project2">Project 2</a> - Brief description.</li>
-      <!-- Add more projects -->
-    </ul>
+  <!-- Experience Section -->
+  <section id="work" class="work-section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <!-- Timeline Item -->
+        <div class="timeline-item">
+          <h3>Company A</h3>
+          <h4>Role - (Year-Year)</h4>
+          <p>Description of your role and achievements at Company A.</p>
+        </div>
+        <!-- Repeat for more experiences -->
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">Your LinkedIn Profile</a></p>
-    <!-- Add other contact methods -->
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project Item -->
+        <div class="project-item">
+          <img src="images/project1.jpg" alt="Project 1">
+          <h3>Project 1</h3>
+          <p>Brief description of Project 1.</p>
+          <a href="https://github.com/your-username/project1" class="btn">View Project</a>
+        </div>
+        <!-- Repeat for more projects -->
+      </div>
+    </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out for collaborations or just a friendly hello 👋</p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourprofile">Your LinkedIn Profile</a></p>
+        <!-- Add other contact methods -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2023 Your Name</p>
+    <div class="container">
+      <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </div>
   </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script src="script.js"></script>
 </body>
 </html>

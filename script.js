@@ -1,9 +1,5 @@
-// script.js
-
-// 1️⃣ Initialize AOS animations
 AOS.init({ duration: 800, once: true });
 
-// 2️⃣ Translation dictionaries
 const translations = {
   en: {
     "meta.title": "Pedro Palacio Estrada | Portfolio",
@@ -82,7 +78,6 @@ const translations = {
     "experience.event6.title": "University of Oviedo – Intern",
     "experience.event6.bullet1": "System and network administration.",
 
-    // Footer
     "contact.title": "Contact",
     "contact.emailLabel": "Email",
     "contact.websiteLabel": "Website",
@@ -176,7 +171,6 @@ const translations = {
   },
 };
 
-// 3️⃣ Apply translations to any element with a data-i18n attribute
 function applyTranslations(lang) {
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -190,7 +184,6 @@ function applyTranslations(lang) {
   }
 }
 
-// 4️⃣ Language switch buttons
 document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const lang = btn.getAttribute("data-lang");
@@ -289,7 +282,6 @@ window.addEventListener("load", () => {
   router();
 });
 
-// 6️⃣ Project modal logic
 const modal = document.getElementById("project-modal");
 const backdrop = modal.querySelector(".modal-backdrop");
 const btnClose = modal.querySelector(".modal-close");

@@ -234,6 +234,11 @@ function router() {
   const viewEl = document.querySelector(targetView);
   viewEl.classList.remove("hidden");
 
+  gtag("event", "page_view", {
+    page_path: window.location.hash,
+    page_title: document.title,
+  });
+
   navLinks.forEach((link) => link.classList.remove("active"));
   const activeLink = document.querySelector(`nav a[href="${hash}"]`);
   if (activeLink) activeLink.classList.add("active");

@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4RBRX5406T"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-4RBRX5406T");
+  </script>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +23,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <!-- AOS Animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    " rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -198,73 +211,161 @@
 
     <!-- Contact View -->
     <div id="view-contact" class="view hidden">
-      <section id="contact">
+      <section class="contact-section">
         <h2 data-i18n="contact.title">Contacto</h2>
-        <p>
-          <span data-i18n="contact.emailLabel">Email</span>:
-          pedropalacioestrada@outlook.es
-        </p>
-        <p>
-          <span data-i18n="contact.linkedinLabel">LinkedIn</span>:
-          <a href="https://linkedin.com/in/pedropalacioestrada" target="_blank">
-            linkedin.com/in/pedropalacioestrada
+        <div class="contact-grid">
+          <a href="mailto:pedropalacioestrada@outlook.es" class="contact-card">
+            <div class="icon-wrapper">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M2 4h20v16H2z" fill="none" />
+                <path d="M22 6l-10 7L2 6v12h20V6zm-10 4L2 6h20l-10 4z" />
+              </svg>
+            </div>
+            <div class="contact-info">
+              <h3 data-i18n="contact.emailLabel">Email</h3>
+              <p>pedropalacioestrada@outlook.es</p>
+            </div>
           </a>
-        </p>
+
+          <a
+            href="https://pedropalacioestrada.com"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="icon-wrapper">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M12 4a8 8 0 100 16 8 8 0 000-16zm1 11h-2v-2H9l3-3 3 3h-2v2z"
+                />
+              </svg>
+            </div>
+            <div class="contact-info">
+              <h3 data-i18n="contact.websiteLabel">Web</h3>
+              <p>pedropalacioestrada.com</p>
+            </div>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/pedropalacioestrada"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="icon-wrapper">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  d="M4.98 3a2 2 0 11-.02 0H5zM2 8.5h6V22H2V8.5zM8.5 8.5h6v1.84c.84-1.38 2.87-2.08 4.5-1.5V8.5h6v13.5h-6v-7.5c0-1.38-.25-3.16-2-3.16-1.75 0-2 1.5-2 3.06V22h-6V8.5z"
+                />
+              </svg>
+            </div>
+            <div class="contact-info">
+              <h3 data-i18n="contact.linkedinLabel">LinkedIn</h3>
+              <p>linkedin.com/in/pedropalacioestrada</p>
+            </div>
+          </a>
+        </div>
       </section>
     </div>
 
     <div id="view-experience" class="view hidden">
-      <section>
+      <section class="timeline">
         <h2 data-i18n="experience.title">Experiencia Profesional</h2>
-        <ul class="experience-list">
-          <li>
-            <h3>CERN – Software Engineer (GRAE)</h3>
-            <span>Jul 2023 – Presente</span>
-            <ul>
-              <li>Web Energy – gestión de consumo energético</li>
-              <li>Supply Manager – inventario y adquisiciones</li>
-              <li>Rediseño backend con Spring Boot y Oracle</li>
-              <li>Mentoría de estudiante en prácticas</li>
-            </ul>
-          </li>
-          <li>
-            <h3>CERN – Software Engineer (PJAS)</h3>
-            <span>May 2022 – Jul 2023</span>
-            <ul>
-              <li>10+ herramientas internas en Java & Angular</li>
-              <li>CI/CD con Docker y OpenShift (–40% tiempo despliegue)</li>
-              <li>Optimización de consultas Oracle (+25% rendimiento)</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Merkle Inc. – Data Engineer</h3>
-            <span>Mar 2022 – May 2022</span>
-            <ul>
-              <li>Integración de Google Analytics, GTM, Adobe Analytics</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Goo Apps – Software Engineering Intern</h3>
-            <span>Sep 2021 – Feb 2022</span>
-            <ul>
-              <li>Copesa Mobile – features React Native & Symfony</li>
-            </ul>
-          </li>
-          <li>
-            <h3>CTIC Foundation – Software Dev Intern</h3>
-            <span>Feb 2020 – Jun 2021</span>
-            <ul>
-              <li>Aplicaciones embebidas Python/PyQt (+30% automatización)</li>
-            </ul>
-          </li>
-          <li>
-            <h3>University of Oviedo – Intern</h3>
-            <span>Sep 2019 – Feb 2020</span>
-            <ul>
-              <li>Administración sistemas y redes</li>
-            </ul>
-          </li>
-        </ul>
+
+        <article class="event">
+          <time data-i18n="experience.event1.time">Jul 2023 – Presente</time>
+          <h3 data-i18n="experience.event1.title">
+            CERN – Software Engineer (GRAE)
+          </h3>
+          <ul>
+            <li data-i18n="experience.event1.bullet1">
+              Desarrollé Web Energy: monitorización de consumo energético.
+            </li>
+            <li data-i18n="experience.event1.bullet2">
+              Sistema de peticiones de equipos con Angular y Java.
+            </li>
+            <li data-i18n="experience.event1.bullet3">
+              Optimicé pipelines CI/CD en GitLab / Docker sobre OpenShift.
+            </li>
+            <li data-i18n="experience.event1.bullet4">
+              Rediseñé backend con Spring Boot y Oracle.
+            </li>
+            <li data-i18n="experience.event1.bullet5">
+              Mentoría y onboarding de estudiantes en prácticas.
+            </li>
+          </ul>
+        </article>
+
+        <article class="event">
+          <time data-i18n="experience.event2.time">May 2022 – Jul 2023</time>
+          <h3 data-i18n="experience.event2.title">
+            CERN – Software Engineer (PJAS)
+          </h3>
+          <ul>
+            <li data-i18n="experience.event2.bullet1">
+              4+ herramientas en Java Spring Boot y Angular.
+            </li>
+            <li data-i18n="experience.event2.bullet2">
+              CI/CD Docker/OpenShift: –40% tiempo de despliegue.
+            </li>
+            <li data-i18n="experience.event2.bullet3">
+              Optimización de consultas Oracle: +25% rendimiento.
+            </li>
+          </ul>
+        </article>
+
+        <article class="event">
+          <time data-i18n="experience.event3.time">Mar – May 2022</time>
+          <h3 data-i18n="experience.event3.title">
+            Merkle Inc. – Data Engineer
+          </h3>
+          <ul>
+            <li data-i18n="experience.event3.bullet1">
+              Integración de Google Analytics, GTM y Adobe Analytics.
+            </li>
+          </ul>
+        </article>
+
+        <article class="event">
+          <time data-i18n="experience.event4.time">Sep 2021 – Feb 2022</time>
+          <h3 data-i18n="experience.event4.title">
+            Goo Apps – Software Engineering Intern
+          </h3>
+          <ul>
+            <li data-i18n="experience.event4.bullet1">
+              Funciones en React Native y Symfony (Copesa Mobile).
+            </li>
+            <li data-i18n="experience.event4.bullet2">
+              5k+ usuarios activos con optimizaciones de rendimiento.
+            </li>
+          </ul>
+        </article>
+
+        <article class="event">
+          <time data-i18n="experience.event5.time">Feb 2020 – Jun 2021</time>
+          <h3 data-i18n="experience.event5.title">
+            CTIC Foundation – Software Dev Intern
+          </h3>
+          <ul>
+            <li data-i18n="experience.event5.bullet1">
+              Aplicaciones embebidas en Python/PyQt (+30% automatización).
+            </li>
+            <li data-i18n="experience.event5.bullet2">
+              Módulos web en Node.js/React y proyectos en Spring Java.
+            </li>
+          </ul>
+        </article>
+
+        <article class="event">
+          <time data-i18n="experience.event6.time">Sep 2019 – Feb 2020</time>
+          <h3 data-i18n="experience.event6.title">
+            University of Oviedo – Intern
+          </h3>
+          <ul>
+            <li data-i18n="experience.event6.bullet1">
+              Administración de sistemas y redes.
+            </li>
+          </ul>
+        </article>
       </section>
     </div>
 

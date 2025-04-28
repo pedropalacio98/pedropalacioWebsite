@@ -1,13 +1,15 @@
-// Initialize AOS animations
+// script.js
+
+// 1️⃣ Initialize AOS animations
 AOS.init({ duration: 800, once: true });
 
-// Translation dictionaries
+// 2️⃣ Translation dictionaries
 const translations = {
   en: {
     "meta.title": "Pedro Palacio Estrada | Portfolio",
     "nav.home": "Home",
     "nav.projects": "Projects",
-    "nav.experience": "Proffesional Experience",
+    "nav.experience": "Professional Experience",
     "nav.contact": "Contact",
     "hero.title": "Pedro Palacio Estrada",
     "hero.subtitle": "Software Engineer | Full-stack Developer",
@@ -36,8 +38,54 @@ const translations = {
     "project.fireDrone.title": "FireDrone (Master’s)",
     "project.fireDrone.text":
       "Autonomous firefighting drone software using C++ and ROS, achieving 85% detection accuracy.",
+    "experience.title": "Professional Experience",
+
+    "experience.event1.time": "Jul 2023 – Present",
+    "experience.event1.title": "CERN – Software Engineer (GRAE)",
+    "experience.event1.bullet1":
+      "Developed Web Energy: energy consumption monitoring.",
+    "experience.event1.bullet2":
+      "Equipment request system with Angular and Java.",
+    "experience.event1.bullet3":
+      "Optimized CI/CD pipelines on GitLab/Docker over OpenShift.",
+    "experience.event1.bullet4":
+      "Redesigned backend with Spring Boot and Oracle.",
+    "experience.event1.bullet5": "Mentored and onboarded interns.",
+
+    "experience.event2.time": "May 2022 – Jul 2023",
+    "experience.event2.title": "CERN – Software Engineer (PJAS)",
+    "experience.event2.bullet1": "5+ tools in Java Spring Boot and Angular.",
+    "experience.event2.bullet2":
+      "CI/CD Docker/OpenShift: –40% deployment time.",
+    "experience.event2.bullet3": "Optimized Oracle queries: +25% performance.",
+
+    "experience.event3.time": "Mar – May 2022",
+    "experience.event3.title": "Merkle Inc. – Data Engineer",
+    "experience.event3.bullet1":
+      "Integration of Google Analytics, GTM and Adobe Analytics.",
+
+    "experience.event4.time": "Sep 2021 – Feb 2022",
+    "experience.event4.title": "Goo Apps – Software Engineering Intern",
+    "experience.event4.bullet1":
+      "Functions in React Native and Symfony (Copesa Mobile).",
+    "experience.event4.bullet2":
+      "5k+ active users with performance optimizations.",
+
+    "experience.event5.time": "Feb 2020 – Jun 2021",
+    "experience.event5.title": "CTIC Foundation – Software Dev Intern",
+    "experience.event5.bullet1":
+      "Embedded applications in Python/PyQt (+30% automation).",
+    "experience.event5.bullet2":
+      "Web modules in Node.js/React and Spring Java projects.",
+
+    "experience.event6.time": "Sep 2019 – Feb 2020",
+    "experience.event6.title": "University of Oviedo – Intern",
+    "experience.event6.bullet1": "System and network administration.",
+
+    // Footer
     "contact.title": "Contact",
     "contact.emailLabel": "Email",
+    "contact.websiteLabel": "Website",
     "contact.linkedinLabel": "LinkedIn",
     "footer.text": "© 2025 Pedro Palacio Estrada. All rights reserved.",
   },
@@ -45,6 +93,7 @@ const translations = {
     "meta.title": "Pedro Palacio Estrada | Portfolio",
     "nav.home": "Inicio",
     "nav.projects": "Proyectos",
+    "nav.experience": "Experiencia Profesional",
     "nav.contact": "Contacto",
     "hero.title": "Pedro Palacio Estrada",
     "hero.subtitle": "Ingeniero de Software | Full-stack Developer",
@@ -73,15 +122,61 @@ const translations = {
     "project.fireDrone.title": "FireDrone (Máster)",
     "project.fireDrone.text":
       "Software autónomo para drones contra incendios usando C++ y ROS.",
+    "experience.title": "Experiencia Profesional",
+
+    "experience.event1.time": "Jul 2023 – Presente",
+    "experience.event1.title": "CERN – Software Engineer (GRAE)",
+    "experience.event1.bullet1":
+      "Desarrollé Web Energy: monitorización de consumo energético.",
+    "experience.event1.bullet2":
+      "Sistema de peticiones de equipos con Angular y Java.",
+    "experience.event1.bullet3":
+      "Optimizé pipelines CI/CD en GitLab/Docker sobre OpenShift.",
+    "experience.event1.bullet4": "Rediseñé backend con Spring Boot y Oracle.",
+    "experience.event1.bullet5":
+      "Mentoría y onboarding de estudiantes en prácticas.",
+
+    "experience.event2.time": "May 2022 – Jul 2023",
+    "experience.event2.title": "CERN – Software Engineer (PJAS)",
+    "experience.event2.bullet1":
+      "5+ herramientas en Java Spring Boot y Angular.",
+    "experience.event2.bullet2":
+      "CI/CD Docker/OpenShift: –40% tiempo de despliegue.",
+    "experience.event2.bullet3":
+      "Optimización de consultas Oracle: +25% rendimiento.",
+
+    "experience.event3.time": "Mar – May 2022",
+    "experience.event3.title": "Merkle Inc. – Data Engineer",
+    "experience.event3.bullet1":
+      "Integración de Google Analytics, GTM y Adobe Analytics.",
+
+    "experience.event4.time": "Sep 2021 – Feb 2022",
+    "experience.event4.title": "Goo Apps – Software Engineering Intern",
+    "experience.event4.bullet1":
+      "Funciones en React Native y Symfony (Copesa Mobile).",
+    "experience.event4.bullet2":
+      "5k+ usuarios activos con optimizaciones de rendimiento.",
+
+    "experience.event5.time": "Feb 2020 – Jun 2021",
+    "experience.event5.title": "CTIC Foundation – Software Dev Intern",
+    "experience.event5.bullet1":
+      "Aplicaciones embebidas en Python/PyQt (+30% automatización).",
+    "experience.event5.bullet2":
+      "Módulos web en Node.js/React y proyectos en Spring Java.",
+
+    "experience.event6.time": "Sep 2019 – Feb 2020",
+    "experience.event6.title": "University of Oviedo – Intern",
+    "experience.event6.bullet1": "Administración de sistemas y redes.",
     "contact.title": "Contacto",
     "contact.emailLabel": "Email",
+    "contact.websiteLabel": "Web",
     "contact.linkedinLabel": "LinkedIn",
     "footer.text":
       "© 2025 Pedro Palacio Estrada. Todos los derechos reservados.",
   },
 };
 
-// Apply translations based on current language
+// 3️⃣ Apply translations to any element with a data-i18n attribute
 function applyTranslations(lang) {
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -95,7 +190,7 @@ function applyTranslations(lang) {
   }
 }
 
-// Language switch buttons
+// 4️⃣ Language switch buttons
 document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const lang = btn.getAttribute("data-lang");
@@ -108,7 +203,6 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
   });
 });
 
-// Simple hash-based router with route-change animations
 const views = document.querySelectorAll(".view");
 const navLinks = document.querySelectorAll(".nav-link");
 
@@ -116,25 +210,67 @@ function router() {
   const hash = window.location.hash || "#/";
   views.forEach((v) => v.classList.add("hidden"));
   document
-    .querySelectorAll(".card")
-    .forEach((c) => c.classList.remove("route-anim"));
+    .querySelectorAll(".route-anim")
+    .forEach((el) => el.classList.remove("route-anim"));
 
   let targetView;
-  if (hash === "#/") targetView = "#view-home";
-  else if (hash === "#/projects") targetView = "#view-projects";
-  else if (hash === "#/experience") targetView = "#view-experience";
-  else targetView = "#view-contacts";
+  switch (hash) {
+    case "#/":
+      targetView = "#view-home";
+      break;
+    case "#/projects":
+      targetView = "#view-projects";
+      break;
+    case "#/experience":
+      targetView = "#view-experience";
+      break;
+    case "#/contact":
+      targetView = "#view-contact";
+      break;
+    default:
+      targetView = "#view-home";
+  }
 
   const viewEl = document.querySelector(targetView);
   viewEl.classList.remove("hidden");
-  navLinks.forEach((link) => link.classList.remove("active"));
-  document.querySelector(`nav a[href="${hash}"]`).classList.add("active");
 
-  if (targetView === "#view-projects") {
+  navLinks.forEach((link) => link.classList.remove("active"));
+  const activeLink = document.querySelector(`nav a[href="${hash}"]`);
+  if (activeLink) activeLink.classList.add("active");
+
+  const animItems = viewEl.querySelectorAll(":scope > *");
+  animItems.forEach((item, i) =>
+    setTimeout(() => item.classList.add("route-anim"), i * 100)
+  );
+
+  if (hash === "#/projects") {
     const cards = viewEl.querySelectorAll(".card");
-    cards.forEach((card, index) => {
-      setTimeout(() => card.classList.add("route-anim"), index * 100);
-    });
+    cards.forEach((card, i) =>
+      setTimeout(
+        () => card.classList.add("route-anim"),
+        (i + animItems.length) * 100
+      )
+    );
+  }
+
+  if (hash === "#/experience") {
+    const events = viewEl.querySelectorAll(".timeline .event");
+    events.forEach((ev, i) =>
+      setTimeout(
+        () => ev.classList.add("route-anim"),
+        (i + animItems.length) * 100
+      )
+    );
+  }
+
+  if (hash === "#/contact") {
+    const cards = viewEl.querySelectorAll(".contact-card");
+    cards.forEach((card, i) =>
+      setTimeout(
+        () => card.classList.add("route-anim"),
+        (i + animItems.length) * 100
+      )
+    );
   }
 }
 
@@ -143,50 +279,12 @@ window.addEventListener("hashchange", () => {
   applyTranslations(window.currentLang);
 });
 window.addEventListener("load", () => {
-  const defaultLang = "es";
-  window.currentLang = defaultLang;
-  applyTranslations(defaultLang);
+  window.currentLang = "es";
+  applyTranslations(window.currentLang);
   router();
 });
 
-function router() {
-  const hash = window.location.hash || "#/";
-  views.forEach((v) => v.classList.add("hidden"));
-  // remove any lingering animations
-  document.querySelectorAll(".route-anim").forEach((el) => {
-    el.classList.remove("route-anim");
-  });
-
-  let targetView;
-  if (hash === "#/") targetView = "#view-home";
-  else if (hash === "#/projects") targetView = "#view-projects";
-  else targetView = "#view-contact";
-
-  const viewEl = document.querySelector(targetView);
-  viewEl.classList.remove("hidden");
-
-  // mark nav link as active
-  navLinks.forEach((link) => link.classList.remove("active"));
-  document.querySelector(`nav a[href="${hash}"]`).classList.add("active");
-
-  // 1️⃣ Animate every direct child of this view
-  const animItems = viewEl.querySelectorAll(":scope > *");
-  animItems.forEach((item, index) => {
-    setTimeout(() => item.classList.add("route-anim"), index * 100);
-  });
-
-  // 2️⃣ (Unchanged)—if we're on projects, also stagger each .card
-  if (targetView === "#view-projects") {
-    const cards = viewEl.querySelectorAll(".card");
-    cards.forEach((card, i) => {
-      setTimeout(
-        () => card.classList.add("route-anim"),
-        (i + animItems.length) * 100
-      );
-    });
-  }
-}
-
+// 6️⃣ Project modal logic
 const modal = document.getElementById("project-modal");
 const backdrop = modal.querySelector(".modal-backdrop");
 const btnClose = modal.querySelector(".modal-close");
@@ -195,24 +293,18 @@ const textEl = document.getElementById("modal-text");
 
 document.querySelectorAll("#view-projects button.card").forEach((card) => {
   card.addEventListener("click", () => {
-    const t = card.dataset.title;
-    const txt = card.dataset.text;
-
-    titleEl.innerText = t;
-    textEl.innerText = txt;
-
+    titleEl.innerText = card.dataset.title;
+    textEl.innerText = card.dataset.text;
     modal.classList.remove("hidden");
   });
 });
 
-// Función para cerrar
 function closeModal() {
   modal.classList.add("hidden");
 }
+
 btnClose.addEventListener("click", closeModal);
 backdrop.addEventListener("click", closeModal);
-
-// Escapar con la tecla Esc
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();

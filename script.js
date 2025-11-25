@@ -58,20 +58,26 @@ window.addEventListener("mousemove", (e) => {
 
 const translations = {
   en: {
-    "meta.title": "Pedro Palacio Estrada | Portfolio",
-    "nav.home": "Home",
-    "nav.projects": "Projects",
-    "nav.experience": "Experience",
-    "nav.contact": "Contact",
-    "hero.greeting": "Hello, I am",
-    "hero.title": "Pedro Palacio Estrada",
-    "hero.subtitle": "Software Engineer | Full-stack Developer",
-    "hero.cta": "View Projects",
-    "hero.contact": "Contact Me",
-    "about.title": "About Me",
-    "about.text":
-      "I am a passionate full-stack software engineer who creates scalable, optimized applications. Skilled in frontend, backend, CI/CD, and Agile methodologies.",
-    "projects.title": "Highlighted Projects",
+    meta: {
+      title: "Pedro Palacio Estrada | Software Architect & Engineer"
+    },
+    nav: {
+      home: "Home",
+      projects: "Projects",
+      experience: "Experience",
+      contact: "Contact"
+    },
+    hero: {
+      greeting: "Hi, I'm",
+      title: "Pedro Palacio Estrada",
+      subtitle: "Software Architect | Computer Engineer",
+      cta: "View Projects",
+      contact: "Contact Me"
+    },
+    about: {
+      title: "About Me",
+      text: "I am a Computer Engineer and Software Architect passionate about designing scalable, high-performance systems. Specialized in Cloud Architecture (OpenShift, Docker), Full-stack development (Java, Angular), and technical leadership in complex environments like CERN."
+    }, "projects.title": "Highlighted Projects",
     "experience.title": "Professional Experience",
     "experience.event1.time": "Jul 2023 – Present",
     "experience.event1.title": "CERN – Software Engineer (GRAE)",
@@ -116,19 +122,26 @@ const translations = {
     "footer.text": "© 2025 Pedro Palacio Estrada. All rights reserved.",
   },
   es: {
-    "meta.title": "Pedro Palacio Estrada | Portfolio",
-    "nav.home": "Inicio",
-    "nav.projects": "Proyectos",
-    "nav.experience": "Experiencia",
-    "nav.contact": "Contacto",
-    "hero.greeting": "Hola, soy",
-    "hero.title": "Pedro Palacio Estrada",
-    "hero.subtitle": "Ingeniero de Software | Full-stack Developer",
-    "hero.cta": "Ver Proyectos",
-    "hero.contact": "Contactar",
-    "about.title": "Sobre mí",
-    "about.text":
-      "Soy un ingeniero de software full-stack apasionado por crear aplicaciones escalables y optimizadas. Experto en frontend, backend, CI/CD y metodologías Agile.",
+    meta: {
+      title: "Pedro Palacio Estrada | Software Architect & Engineer"
+    },
+    nav: {
+      home: "Inicio",
+      projects: "Proyectos",
+      experience: "Experiencia",
+      contact: "Contacto"
+    },
+    hero: {
+      greeting: "Hola, soy",
+      title: "Pedro Palacio Estrada",
+      subtitle: "Software Architect | Ingeniero Informático",
+      cta: "Ver Proyectos",
+      contact: "Contactar"
+    },
+    about: {
+      title: "Sobre mí",
+      text: "Soy un Ingeniero Informático y Arquitecto de Software apasionado por diseñar sistemas escalables y de alto rendimiento. Especializado en arquitectura Cloud (OpenShift, Docker), desarrollo Full-stack (Java, Angular) y liderazgo técnico en entornos complejos como el CERN."
+    },
     "projects.title": "Proyectos Destacados",
     "experience.title": "Experiencia Profesional",
     "experience.event1.time": "Jul 2023 – Presente",

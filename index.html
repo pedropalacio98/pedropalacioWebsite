@@ -1,384 +1,577 @@
 <!DOCTYPE html>
 <html lang="es">
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-4RBRX5406T"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4RBRX5406T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-    gtag("config", "G-4RBRX5406T");
-  </script>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="meta.title">Pedro Palacio Estrada | Portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo"><strong>Pedro Palacio</strong></div>
-      <nav>
+  gtag("config", "G-4RBRX5406T");
+</script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">Pedro Palacio Estrada | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <!-- Background Elements -->
+  <div class="bg-gradient-1"></div>
+  <div class="bg-gradient-2"></div>
+  <div class="bg-grid"></div>
+
+  <header id="main-header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="#/">Pedro Palacio<span class="accent-dot">.</span></a>
+      </div>
+      <nav id="main-nav">
         <a href="#/" data-i18n="nav.home" class="nav-link">Inicio</a>
-        <a href="#/projects" data-i18n="nav.projects" class="nav-link"
-          >Proyectos</a
-        >
-        <a href="#/experience" data-i18n="nav.experience" class="nav-link"
-          >Experiencia</a
-        >
-        <a href="#/contact" data-i18n="nav.contact" class="nav-link"
-          >Contacto</a
-        >
+        <a href="#/projects" data-i18n="nav.projects" class="nav-link">Proyectos</a>
+        <a href="#/experience" data-i18n="nav.experience" class="nav-link">Experiencia</a>
+        <a href="#/contact" data-i18n="nav.contact" class="nav-link">Contacto</a>
       </nav>
-      <div class="lang-switch">
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn active" data-lang="es">ES</button>
-      </div>
-    </header>
-
-    <div id="view-home" class="view">
-      <div class="hero">
-        <div class="svg-icons">
-          <svg class="svg-icon code-icon" viewBox="0 0 24 24">
-            <polyline
-              points="7 7 2 12 7 17"
-              stroke="var(--light)"
-              stroke-width="2"
-              fill="none"
-            />
-            <polyline
-              points="17 7 22 12 17 17"
-              stroke="var(--light)"
-              stroke-width="2"
-              fill="none"
-            />
-          </svg>
-          <svg class="svg-icon gear-icon" viewBox="0 0 24 24">
-            <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
-            <path
-              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
-            />
-          </svg>
-          <svg class="svg-icon screen-icon" viewBox="0 0 24 24">
-            <rect
-              x="3"
-              y="4"
-              width="18"
-              height="12"
-              rx="2"
-              stroke="var(--light)"
-              stroke-width="2"
-              fill="none"
-            />
-            <line
-              x1="8"
-              y1="20"
-              x2="16"
-              y2="20"
-              stroke="var(--light)"
-              stroke-width="2"
-            />
-          </svg>
+      <div class="header-actions">
+        <div class="lang-switch">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <span class="divider">/</span>
+          <button class="lang-btn active" data-lang="es">ES</button>
         </div>
-        <h1 data-i18n="hero.title">Pedro Palacio Estrada</h1>
-        <p data-i18n="hero.subtitle">
-          Ingeniero de Software | Full-stack Developer
-        </p>
+        <button id="login-btn" class="btn-login" aria-label="Login">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </button>
+        <div id="user-profile" class="hidden">
+          <img id="user-avatar" src="" alt="User" />
+          <button id="logout-btn" aria-label="Logout">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+          </button>
+        </div>
       </div>
-      <section id="about">
-        <h2 data-i18n="about.title">Sobre mí</h2>
-        <p data-i18n="about.text">
-          Soy un ingeniero de software full-stack apasionado por crear
-          aplicaciones escalables y optimizadas. Experto en frontend, backend,
-          CI/CD y metodologías Agile.
-        </p>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div id="view-home" class="view">
+      <section class="hero">
+        <div class="container hero-container">
+          <div class="hero-content" data-aos="fade-up">
+            <p class="hero-greeting" data-i18n="hero.greeting">Hola, soy</p>
+            <h1 data-i18n="hero.title" class="hero-title-text">Pedro Palacio Estrada</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+              Ingeniero de Software | Full-stack Developer
+            </p>
+            <div class="hero-actions">
+              <a href="#/projects" class="btn btn-primary" data-i18n="hero.cta">Ver Proyectos</a>
+              <a href="#/contact" class="btn btn-outline" data-i18n="hero.contact">Contactar</a>
+              <a href="#/admin" id="admin-link" class="btn btn-outline hidden"
+                style="border-color: var(--gradient-2); color: var(--gradient-2);">Mis Cosas</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <h2 data-i18n="about.title">Sobre mí</h2>
+            <div class="line"></div>
+          </div>
+          <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+            <p data-i18n="about.text">
+              Soy un ingeniero de software full-stack apasionado por crear
+              aplicaciones escalables y optimizadas. Experto en frontend,
+              backend, CI/CD y metodologías Agile.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Admin View -->
+    <div id="view-admin" class="view hidden">
+      <section class="admin-section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <h2>Mis Cosas</h2>
+            <div class="line"></div>
+          </div>
+          <div class="admin-content" data-aos="fade-up">
+            <div class="admin-card">
+              <h3>Bienvenido, Pedro</h3>
+              <p>Aquí tienes acceso a tus herramientas privadas.</p>
+              <div class="admin-actions">
+                <button class="btn btn-primary">Gestionar Proyectos</button>
+                <button class="btn btn-outline">Ver Estadísticas</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
 
     <div id="view-projects" class="view hidden">
-      <section>
-        <h2 data-i18n="projects.title">Proyectos Destacados</h2>
-        <div class="bento-grid">
-          <button
-            class="card"
-            data-title="Supply Manager (CERN)"
-            data-text="Gestión de inventario y flujos de adquisición en CERN con control de stock y notificaciones automáticas."
-          >
-            <div class="card-content">
-              <h3>Supply Manager (CERN)</h3>
-              <p>Gestión de inventario y flujos de adquisición en CERN.</p>
-            </div>
-          </button>
+      <section class="projects-section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <h2 data-i18n="projects.title">Proyectos Destacados</h2>
+            <div class="line"></div>
+          </div>
+          <div class="bento-grid">
+            <!-- Cards will be populated/managed via JS or static HTML below -->
+            <article class="project-card" data-aos="fade-up" data-title="Supply Manager (CERN)"
+              data-text="Gestión de inventario y flujos de adquisición en CERN con control de stock y notificaciones automáticas.">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="folder-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </span>
+                  <div class="external-links">
+                  </div>
+                </div>
+                <h3 class="project-title">Supply Manager (CERN)</h3>
+                <p class="project-desc">
+                  Gestión de peticiones de equipamiento electronico y flujos de adquisición en el departamento de
+                  Ingeniería Electrónica del CERN.
+                </p>
+                <ul class="tech-stack">
+                  <li>Angular</li>
+                  <li>Java (Spring Boot)</li>
+                  <li>OpenShift</li>
+                  <li>Gitlab</li>
+                  <li>Docker</li>
+                  <li>Oracle</li>
+                </ul>
+              </div>
+            </article>
 
-          <button
-            class="card"
-            data-title="Web Energy (CERN)"
-            data-text="Monitorización del consumo energético con dashboards interactivos, alertas en tiempo real y análisis histórico."
-          >
-            <div class="card-content">
-              <h3>Web Energy (CERN)</h3>
-              <p>
-                Monitorización del consumo energético con dashboards
-                interactivos.
-              </p>
-            </div>
-          </button>
+            <article class="project-card" data-aos="fade-up" data-delay="100" data-title="Web Energy (CERN)"
+              data-text="Monitorización del consumo energético con dashboards interactivos, alertas en tiempo real y análisis histórico.">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="folder-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </span>
+                </div>
+                <h3 class="project-title">Web Energy (CERN)</h3>
+                <p class="project-desc">
+                  Monitorización del consumo energético con dashboards
+                  interactivos.
+                </p>
+                <ul class="tech-stack">
+                  <li>Angular</li>
+                  <li>Spring Boot</li>
+                  <li>OpenShift</li>
+                  <li>D3.js</li>
+                  <li>Gitlab</li>
+                  <li>Docker</li>
+                  <li>Oracle</li>
+                </ul>
+              </div>
+            </article>
 
-          <button
-            class="card"
-            data-title="Paneles Técnicos (CERN)"
-            data-text="Migración de flujos complejos de Excel a procesos automatizados con fórmulas y diagramas de Gantt, mejorando la eficiencia de planificación en un 30%."
-          >
-            <div class="card-content">
-              <h3>Paneles Técnicos (CERN)</h3>
-              <p>
-                Migración de flujos complejos de Excel a procesos automatizados
-                con fórmulas y diagramas de Gantt.
-              </p>
-            </div>
-          </button>
+            <article class="project-card" data-aos="fade-up" data-delay="200" data-title="Paneles Técnicos (CERN)"
+              data-text="Migración de flujos complejos de Excel a procesos automatizados con fórmulas y diagramas de Gantt, mejorando la eficiencia de planificación en un 30%.">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="folder-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </span>
+                </div>
+                <h3 class="project-title">Paneles Técnicos (CERN)</h3>
+                <p class="project-desc">
+                  Migración de complejas macros en Visual de Excel a aplicacion web con procesos automatizados.
+                </p>
+                <ul class="tech-stack">
+                  <li>Angular</li>
+                  <li>Java (Spring Boot)</li>
+                  <li>Dhtmlx JS</li>
+                  <li>OpenShift</li>
+                  <li>Gitlab</li>
+                  <li>Docker</li>
+                  <li>Oracle</li>
+                </ul>
+              </div>
+            </article>
 
-          <button
-            class="card"
-            data-title="Works Manager (CERN)"
-            data-text="Soporte y extensión de funcionalidades en el proyecto Works Manager para el seguimiento de proyectos, incluyendo paneles personalizables y alertas de progreso."
-          >
-            <div class="card-content">
-              <h3>Works Manager (CERN)</h3>
-              <p>
-                Soporte y extensión de funcionalidades en el proyecto Works
-                Manager para el seguimiento de proyectos.
-              </p>
-            </div>
-          </button>
+            <article class="project-card" data-aos="fade-up" data-title="Works Manager (CERN)"
+              data-text="Soporte y extensión de funcionalidades en el proyecto Works Manager para el seguimiento de proyectos, incluyendo paneles personalizables y alertas de progreso.">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="folder-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </span>
+                </div>
+                <h3 class="project-title">Works Manager (CERN)</h3>
+                <p class="project-desc">
+                  Soporte y extensión de funcionalidades para el seguimiento de
+                  proyectos.
+                </p>
+                <ul class="tech-stack">
+                  <li>Angular</li>
+                  <li>Java (Spring Boot)</li>
+                  <li>Dhtmlx JS</li>
+                  <li>OpenShift</li>
+                  <li>Gitlab</li>
+                  <li>Docker</li>
+                  <li>Oracle</li>
+                </ul>
+              </div>
+            </article>
 
-          <button
-            class="card"
-            data-title="Copesa Mobile (Goo Apps)"
-            data-text="Desarrollo de funcionalidades en React Native y API REST con Symfony, integración de notificaciones push y gestión de usuarios."
-          >
-            <div class="card-content">
-              <h3>Copesa Mobile (Goo Apps)</h3>
-              <p>
-                Funcionalidades en React Native y backend Symfony para app de
-                noticias.
-              </p>
-            </div>
-          </button>
+            <article class="project-card" data-aos="fade-up" data-delay="100" data-title="Copesa Mobile (Goo Apps)"
+              data-text="Desarrollo de funcionalidades en React Native y API REST con Symfony, integración de notificaciones push y gestión de usuarios.">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="folder-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </span>
+                </div>
+                <h3 class="project-title">Copesa Mobile (Goo Apps)</h3>
+                <p class="project-desc">
+                  App de noticias con React Native y backend Symfony.
+                </p>
+                <ul class="tech-stack">
+                  <li>React Native</li>
+                  <li>Symfony</li>
+                  <li>API REST</li>
+                </ul>
+              </div>
+            </article>
 
-          <button
-            class="card"
-            data-title="Motorhertzer (Tesis de Grado)"
-            data-text="Implementación de algoritmos de procesamiento de señales en Python para sensores automotrices, reduciendo ruido en un 15% y mejorando la fiabilidad de datos."
-          >
-            <div class="card-content">
-              <h3>Motorhertzer (Tesis de Grado)</h3>
-              <p>
-                Algoritmos de procesamiento de señales en Python para sensores
-                automotrices, reduciendo ruido en un 15%.
-              </p>
-            </div>
-          </button>
+            <article class="project-card" data-aos="fade-up" data-delay="200" data-title="Motorhertzer (Tesis de Grado)"
+              data-text="Implementación de algoritmos de procesamiento de señales en Python para sensores automotrices, reduciendo ruido en un 15% y mejorando la fiabilidad de datos.">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="folder-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </span>
+                </div>
+                <h3 class="project-title">Motorhertzer</h3>
+                <p class="project-desc">
+                  Algoritmos de procesamiento de señales en Python para sensores
+                  automotrices.
+                </p>
+                <ul class="tech-stack">
+                  <li>Python</li>
+                  <li>Signal Proc</li>
+                  <li>NumPy</li>
+                </ul>
+              </div>
+            </article>
 
-          <button
-            class="card"
-            data-title="FireDrone (Máster)"
-            data-text="Desarrollo de software autónomo para drones contra incendios usando C++ y ROS, con detección de llamas en tiempo real y rutas de vuelo optimizadas."
-          >
-            <div class="card-content">
-              <h3>FireDrone (Máster)</h3>
-              <p>
-                Software autónomo para drones contra incendios usando C++ y ROS.
-              </p>
+            <article class="project-card" data-aos="fade-up" data-title="FireDrone (Máster)"
+              data-text="Desarrollo de software autónomo para drones contra incendios usando C++ y ROS, con detección de llamas en tiempo real y rutas de vuelo optimizadas.">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-header">
+                  <span class="folder-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </span>
+                </div>
+                <h3 class="project-title">FireDrone (Máster)</h3>
+                <p class="project-desc">
+                  Software autónomo para drones contra incendios usando C++ y
+                  ROS.
+                </p>
+                <ul class="tech-stack">
+                  <li>C++</li>
+                  <li>ROS</li>
+                  <li>Robotics</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="view-experience" class="view hidden">
+      <section class="experience-section">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <h2 data-i18n="experience.title">Experiencia Profesional</h2>
+            <div class="line"></div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 data-i18n="experience.event1.title">
+                    CERN – Software Engineer (GRAE)
+                  </h3>
+                  <span class="timeline-date" data-i18n="experience.event1.time">Jul 2023 – Presente</span>
+                </div>
+                <ul class="timeline-list">
+                  <li data-i18n="experience.event1.bullet1">
+                    Desarrollé Web Energy: monitorización de consumo energético.
+                  </li>
+                  <li data-i18n="experience.event1.bullet2">
+                    Sistema de peticiones de equipos con Angular y Java.
+                  </li>
+                  <li data-i18n="experience.event1.bullet3">
+                    Optimicé pipelines CI/CD en GitLab / Docker sobre OpenShift.
+                  </li>
+                  <li data-i18n="experience.event1.bullet4">
+                    Rediseñé backend con Spring Boot y Oracle.
+                  </li>
+                  <li data-i18n="experience.event1.bullet5">
+                    Mentoría y onboarding de estudiantes en prácticas.
+                  </li>
+                </ul>
+              </div>
             </div>
-          </button>
+
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 data-i18n="experience.event2.title">
+                    CERN – Software Engineer (PJAS)
+                  </h3>
+                  <span class="timeline-date" data-i18n="experience.event2.time">May 2022 – Jul 2023</span>
+                </div>
+                <ul class="timeline-list">
+                  <li data-i18n="experience.event2.bullet1">
+                    4+ herramientas en Java Spring Boot y Angular.
+                  </li>
+                  <li data-i18n="experience.event2.bullet2">
+                    CI/CD Docker/OpenShift: –40% tiempo de despliegue.
+                  </li>
+                  <li data-i18n="experience.event2.bullet3">
+                    Optimización de consultas Oracle: +25% rendimiento.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 data-i18n="experience.event3.title">
+                    Merkle Inc. – Data Engineer
+                  </h3>
+                  <span class="timeline-date" data-i18n="experience.event3.time">Mar – May 2022</span>
+                </div>
+                <ul class="timeline-list">
+                  <li data-i18n="experience.event3.bullet1">
+                    Integración de Google Analytics, GTM y Adobe Analytics.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 data-i18n="experience.event4.title">
+                    Goo Apps – Software Engineering Intern
+                  </h3>
+                  <span class="timeline-date" data-i18n="experience.event4.time">Sep 2021 – Feb 2022</span>
+                </div>
+                <ul class="timeline-list">
+                  <li data-i18n="experience.event4.bullet1">
+                    Funciones en React Native y Symfony (Copesa Mobile).
+                  </li>
+                  <li data-i18n="experience.event4.bullet2">
+                    5k+ usuarios activos con optimizaciones de rendimiento.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 data-i18n="experience.event5.title">
+                    CTIC Foundation – Software Dev Intern
+                  </h3>
+                  <span class="timeline-date" data-i18n="experience.event5.time">Feb 2020 – Jun 2021</span>
+                </div>
+                <ul class="timeline-list">
+                  <li data-i18n="experience.event5.bullet1">
+                    Aplicaciones embebidas en Python/PyQt (+30% automatización).
+                  </li>
+                  <li data-i18n="experience.event5.bullet2">
+                    Módulos web en Node.js/React y proyectos en Spring Java.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3 data-i18n="experience.event6.title">
+                    University of Oviedo – Intern
+                  </h3>
+                  <span class="timeline-date" data-i18n="experience.event6.time">Sep 2019 – Feb 2020</span>
+                </div>
+                <ul class="timeline-list">
+                  <li data-i18n="experience.event6.bullet1">
+                    Administración de sistemas y redes.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
 
     <div id="view-contact" class="view hidden">
       <section class="contact-section">
-        <h2 data-i18n="contact.title">Contacto</h2>
-        <div class="contact-grid">
-          <a href="mailto:pedropalacioestrada@outlook.es" class="contact-card">
-            <div class="icon-wrapper">
-              <svg class="icon" viewBox="0 0 24 24">
-                <path d="M2 4h20v16H2z" fill="none" />
-                <path d="M22 6l-10 7L2 6v12h20V6zm-10 4L2 6h20l-10 4z" />
-              </svg>
-            </div>
-            <div class="contact-info">
-              <h3 data-i18n="contact.emailLabel">Email</h3>
-              <p>pedropalacioestrada@outlook.es</p>
-            </div>
-          </a>
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <h2 data-i18n="contact.title">Contacto</h2>
+            <div class="line"></div>
+          </div>
+          <div class="contact-grid">
+            <a href="mailto:pedropalacioestrada@outlook.es" class="contact-card" data-aos="fade-up">
+              <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <h3 data-i18n="contact.emailLabel">Email</h3>
+                <p>pedropalacioestrada@outlook.es</p>
+              </div>
+            </a>
 
-          <a
-            href="https://pedropalacioestrada.com"
-            target="_blank"
-            class="contact-card"
-          >
-            <div class="icon-wrapper">
-              <svg class="icon" viewBox="0 0 24 24">
-                <path fill="none" d="M0 0h24v24H0z" />
-                <path
-                  d="M12 4a8 8 0 100 16 8 8 0 000-16zm1 11h-2v-2H9l3-3 3 3h-2v2z"
-                />
-              </svg>
-            </div>
-            <div class="contact-info">
-              <h3 data-i18n="contact.websiteLabel">Web</h3>
-              <p>pedropalacioestrada.com</p>
-            </div>
-          </a>
+            <a href="https://pedropalacioestrada.com" target="_blank" class="contact-card" data-aos="fade-up"
+              data-aos-delay="100">
+              <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <h3 data-i18n="contact.websiteLabel">Web</h3>
+                <p>pedropalacioestrada.com</p>
+              </div>
+            </a>
 
-          <a
-            href="https://linkedin.com/in/pedropalacioestrada"
-            target="_blank"
-            class="contact-card"
-          >
-            <div class="icon-wrapper">
-              <svg class="icon" viewBox="0 0 24 24">
-                <path
-                  d="M4.98 3a2 2 0 11-.02 0H5zM2 8.5h6V22H2V8.5zM8.5 8.5h6v1.84c.84-1.38 2.87-2.08 4.5-1.5V8.5h6v13.5h-6v-7.5c0-1.38-.25-3.16-2-3.16-1.75 0-2 1.5-2 3.06V22h-6V8.5z"
-                />
-              </svg>
-            </div>
-            <div class="contact-info">
-              <h3 data-i18n="contact.linkedinLabel">LinkedIn</h3>
-              <p>linkedin.com/in/pedropalacioestrada</p>
-            </div>
-          </a>
+            <a href="https://linkedin.com/in/pedropalacioestrada" target="_blank" class="contact-card"
+              data-aos="fade-up" data-aos-delay="200">
+              <div class="icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <h3 data-i18n="contact.linkedinLabel">LinkedIn</h3>
+                <p>linkedin.com/in/pedropalacioestrada</p>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
     </div>
+  </main>
 
-    <div id="view-experience" class="view hidden">
-      <section class="timeline">
-        <h2 data-i18n="experience.title">Experiencia Profesional</h2>
-
-        <article class="event">
-          <time data-i18n="experience.event1.time">Jul 2023 – Presente</time>
-          <h3 data-i18n="experience.event1.title">
-            CERN – Software Engineer (GRAE)
-          </h3>
-          <ul>
-            <li data-i18n="experience.event1.bullet1">
-              Desarrollé Web Energy: monitorización de consumo energético.
-            </li>
-            <li data-i18n="experience.event1.bullet2">
-              Sistema de peticiones de equipos con Angular y Java.
-            </li>
-            <li data-i18n="experience.event1.bullet3">
-              Optimicé pipelines CI/CD en GitLab / Docker sobre OpenShift.
-            </li>
-            <li data-i18n="experience.event1.bullet4">
-              Rediseñé backend con Spring Boot y Oracle.
-            </li>
-            <li data-i18n="experience.event1.bullet5">
-              Mentoría y onboarding de estudiantes en prácticas.
-            </li>
-          </ul>
-        </article>
-
-        <article class="event">
-          <time data-i18n="experience.event2.time">May 2022 – Jul 2023</time>
-          <h3 data-i18n="experience.event2.title">
-            CERN – Software Engineer (PJAS)
-          </h3>
-          <ul>
-            <li data-i18n="experience.event2.bullet1">
-              4+ herramientas en Java Spring Boot y Angular.
-            </li>
-            <li data-i18n="experience.event2.bullet2">
-              CI/CD Docker/OpenShift: –40% tiempo de despliegue.
-            </li>
-            <li data-i18n="experience.event2.bullet3">
-              Optimización de consultas Oracle: +25% rendimiento.
-            </li>
-          </ul>
-        </article>
-
-        <article class="event">
-          <time data-i18n="experience.event3.time">Mar – May 2022</time>
-          <h3 data-i18n="experience.event3.title">
-            Merkle Inc. – Data Engineer
-          </h3>
-          <ul>
-            <li data-i18n="experience.event3.bullet1">
-              Integración de Google Analytics, GTM y Adobe Analytics.
-            </li>
-          </ul>
-        </article>
-
-        <article class="event">
-          <time data-i18n="experience.event4.time">Sep 2021 – Feb 2022</time>
-          <h3 data-i18n="experience.event4.title">
-            Goo Apps – Software Engineering Intern
-          </h3>
-          <ul>
-            <li data-i18n="experience.event4.bullet1">
-              Funciones en React Native y Symfony (Copesa Mobile).
-            </li>
-            <li data-i18n="experience.event4.bullet2">
-              5k+ usuarios activos con optimizaciones de rendimiento.
-            </li>
-          </ul>
-        </article>
-
-        <article class="event">
-          <time data-i18n="experience.event5.time">Feb 2020 – Jun 2021</time>
-          <h3 data-i18n="experience.event5.title">
-            CTIC Foundation – Software Dev Intern
-          </h3>
-          <ul>
-            <li data-i18n="experience.event5.bullet1">
-              Aplicaciones embebidas en Python/PyQt (+30% automatización).
-            </li>
-            <li data-i18n="experience.event5.bullet2">
-              Módulos web en Node.js/React y proyectos en Spring Java.
-            </li>
-          </ul>
-        </article>
-
-        <article class="event">
-          <time data-i18n="experience.event6.time">Sep 2019 – Feb 2020</time>
-          <h3 data-i18n="experience.event6.title">
-            University of Oviedo – Intern
-          </h3>
-          <ul>
-            <li data-i18n="experience.event6.bullet1">
-              Administración de sistemas y redes.
-            </li>
-          </ul>
-        </article>
-      </section>
-    </div>
-
-    <footer>
-      <p data-i18n="footer.text">
-        © 2025 Pedro Palacio Estrada. Todos los derechos reservados.
-      </p>
-    </footer>
-
-    <div id="project-modal" class="modal hidden">
-      <div class="modal-backdrop"></div>
-      <div class="modal-content">
-        <button class="modal-close" aria-label="Cerrar modal">&times;</button>
-        <h3 id="modal-title"></h3>
-        <p id="modal-text"></p>
+  <footer id="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p data-i18n="footer.text">
+          © 2025 Pedro Palacio Estrada. Todos los derechos reservados.
+        </p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/pedropalacioestrada" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
+  </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-  </body>
+  <div id="project-modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    window.firebase = { initializeApp, getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged };
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+
 </html>

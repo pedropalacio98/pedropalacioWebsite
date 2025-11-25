@@ -1,41 +1,78 @@
-AOS.init({ duration: 800, once: true });
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  once: true,
+  offset: 100,
+});
+
+// Custom Cursor Logic
+const cursorDot = document.querySelector("[data-cursor-dot]");
+const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+window.addEventListener("mousemove", function (e) {
+  const posX = e.clientX;
+  const posY = e.clientY;
+
+  // Dot follows instantly
+  cursorDot.style.left = `${posX}px`;
+  cursorDot.style.top = `${posY}px`;
+
+  // Outline follows with slight delay (using animate for smoothness)
+  cursorOutline.animate(
+    {
+      left: `${posX}px`,
+      top: `${posY}px`,
+    },
+    { duration: 500, fill: "forwards" }
+  );
+});
+
+// Add hover effect to interactive elements
+const interactiveElements = document.querySelectorAll("a, button, .project-card");
+interactiveElements.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    cursorOutline.style.transform = "translate(-50%, -50%) scale(1.5)";
+    cursorOutline.style.backgroundColor = "rgba(59, 130, 246, 0.1)";
+  });
+  el.addEventListener("mouseleave", () => {
+    cursorOutline.style.transform = "translate(-50%, -50%) scale(1)";
+    cursorOutline.style.backgroundColor = "transparent";
+  });
+});
+
+// Parallax Effect for Background
+window.addEventListener("mousemove", (e) => {
+  const x = e.clientX / window.innerWidth;
+  const y = e.clientY / window.innerHeight;
+
+  const bg1 = document.querySelector(".bg-gradient-1");
+  const bg2 = document.querySelector(".bg-gradient-2");
+
+  if (bg1) {
+    bg1.style.transform = `translate(-${x * 50}px, -${y * 50}px)`;
+  }
+  if (bg2) {
+    bg2.style.transform = `translate(${x * 50}px, ${y * 50}px)`;
+  }
+});
 
 const translations = {
   en: {
     "meta.title": "Pedro Palacio Estrada | Portfolio",
     "nav.home": "Home",
     "nav.projects": "Projects",
-    "nav.experience": "Professional Experience",
+    "nav.experience": "Experience",
     "nav.contact": "Contact",
+    "hero.greeting": "Hello, I am",
     "hero.title": "Pedro Palacio Estrada",
     "hero.subtitle": "Software Engineer | Full-stack Developer",
+    "hero.cta": "View Projects",
+    "hero.contact": "Contact Me",
     "about.title": "About Me",
     "about.text":
       "I am a passionate full-stack software engineer who creates scalable, optimized applications. Skilled in frontend, backend, CI/CD, and Agile methodologies.",
     "projects.title": "Highlighted Projects",
-    "project.supplyManager.title": "Supply Manager (CERN)",
-    "project.supplyManager.text":
-      "Inventory management and procurement workflows at CERN.",
-    "project.webEnergy.title": "Web Energy (CERN)",
-    "project.webEnergy.text":
-      "Energy consumption monitoring with interactive dashboards.",
-    "project.technicalPanels.title": "Technical Panels (CERN)",
-    "project.technicalPanels.text":
-      "Migrated complex Excel workflows into formula-driven processes with Gantt chart visualizations.",
-    "project.worksManager.title": "Works Manager (CERN)",
-    "project.worksManager.text":
-      "Supported and extended the Works Manager project with new features for project tracking.",
-    "project.copesa.title": "Copesa Mobile (Goo Apps)",
-    "project.copesa.text":
-      "React Native features and Symfony backend for a news distribution app.",
-    "project.motorhertzer.title": "Motorhertzer (Bachelor’s Thesis)",
-    "project.motorhertzer.text":
-      "Developed Python signal-processing algorithms for automotive sensors, reducing noise by 15%.",
-    "project.fireDrone.title": "FireDrone (Master’s)",
-    "project.fireDrone.text":
-      "Autonomous firefighting drone software using C++ and ROS, achieving 85% detection accuracy.",
     "experience.title": "Professional Experience",
-
     "experience.event1.time": "Jul 2023 – Present",
     "experience.event1.title": "CERN – Software Engineer (GRAE)",
     "experience.event1.bullet1":
@@ -47,37 +84,31 @@ const translations = {
     "experience.event1.bullet4":
       "Redesigned backend with Spring Boot and Oracle.",
     "experience.event1.bullet5": "Mentored and onboarded interns.",
-
     "experience.event2.time": "May 2022 – Jul 2023",
     "experience.event2.title": "CERN – Software Engineer (PJAS)",
     "experience.event2.bullet1": "5+ tools in Java Spring Boot and Angular.",
     "experience.event2.bullet2":
       "CI/CD Docker/OpenShift: –40% deployment time.",
     "experience.event2.bullet3": "Optimized Oracle queries: +25% performance.",
-
     "experience.event3.time": "Mar – May 2022",
     "experience.event3.title": "Merkle Inc. – Data Engineer",
     "experience.event3.bullet1":
       "Integration of Google Analytics, GTM and Adobe Analytics.",
-
     "experience.event4.time": "Sep 2021 – Feb 2022",
     "experience.event4.title": "Goo Apps – Software Engineering Intern",
     "experience.event4.bullet1":
       "Functions in React Native and Symfony (Copesa Mobile).",
     "experience.event4.bullet2":
       "5k+ active users with performance optimizations.",
-
     "experience.event5.time": "Feb 2020 – Jun 2021",
     "experience.event5.title": "CTIC Foundation – Software Dev Intern",
     "experience.event5.bullet1":
       "Embedded applications in Python/PyQt (+30% automation).",
     "experience.event5.bullet2":
       "Web modules in Node.js/React and Spring Java projects.",
-
     "experience.event6.time": "Sep 2019 – Feb 2020",
     "experience.event6.title": "University of Oviedo – Intern",
     "experience.event6.bullet1": "System and network administration.",
-
     "contact.title": "Contact",
     "contact.emailLabel": "Email",
     "contact.websiteLabel": "Website",
@@ -88,37 +119,18 @@ const translations = {
     "meta.title": "Pedro Palacio Estrada | Portfolio",
     "nav.home": "Inicio",
     "nav.projects": "Proyectos",
-    "nav.experience": "Experiencia Profesional",
+    "nav.experience": "Experiencia",
     "nav.contact": "Contacto",
+    "hero.greeting": "Hola, soy",
     "hero.title": "Pedro Palacio Estrada",
     "hero.subtitle": "Ingeniero de Software | Full-stack Developer",
+    "hero.cta": "Ver Proyectos",
+    "hero.contact": "Contactar",
     "about.title": "Sobre mí",
     "about.text":
       "Soy un ingeniero de software full-stack apasionado por crear aplicaciones escalables y optimizadas. Experto en frontend, backend, CI/CD y metodologías Agile.",
     "projects.title": "Proyectos Destacados",
-    "project.supplyManager.title": "Supply Manager (CERN)",
-    "project.supplyManager.text":
-      "Gestión de inventario y flujos de adquisición en CERN.",
-    "project.webEnergy.title": "Web Energy (CERN)",
-    "project.webEnergy.text":
-      "Monitorización del consumo energético con dashboards interactivos.",
-    "project.technicalPanels.title": "Paneles Técnicos (CERN)",
-    "project.technicalPanels.text":
-      "Migración de flujos complejos de Excel a procesos automatizados con fórmulas y diagramas de Gantt.",
-    "project.worksManager.title": "Works Manager (CERN)",
-    "project.worksManager.text":
-      "Soporte y extensión de funcionalidades en el proyecto Works Manager para el seguimiento de proyectos.",
-    "project.copesa.title": "Copesa Mobile (Goo Apps)",
-    "project.copesa.text":
-      "Funcionalidades en React Native y backend Symfony para app de noticias.",
-    "project.motorhertzer.title": "Motorhertzer (Tesis de Grado)",
-    "project.motorhertzer.text":
-      "Algoritmos de procesamiento de señales en Python para sensores automotrices, reduciendo ruido en un 15%.",
-    "project.fireDrone.title": "FireDrone (Máster)",
-    "project.fireDrone.text":
-      "Software autónomo para drones contra incendios usando C++ y ROS.",
     "experience.title": "Experiencia Profesional",
-
     "experience.event1.time": "Jul 2023 – Presente",
     "experience.event1.title": "CERN – Software Engineer (GRAE)",
     "experience.event1.bullet1":
@@ -126,11 +138,10 @@ const translations = {
     "experience.event1.bullet2":
       "Sistema de peticiones de equipos con Angular y Java.",
     "experience.event1.bullet3":
-      "Optimizé pipelines CI/CD en GitLab/Docker sobre OpenShift.",
+      "Optimicé pipelines CI/CD en GitLab/Docker sobre OpenShift.",
     "experience.event1.bullet4": "Rediseñé backend con Spring Boot y Oracle.",
     "experience.event1.bullet5":
       "Mentoría y onboarding de estudiantes en prácticas.",
-
     "experience.event2.time": "May 2022 – Jul 2023",
     "experience.event2.title": "CERN – Software Engineer (PJAS)",
     "experience.event2.bullet1":
@@ -139,26 +150,22 @@ const translations = {
       "CI/CD Docker/OpenShift: –40% tiempo de despliegue.",
     "experience.event2.bullet3":
       "Optimización de consultas Oracle: +25% rendimiento.",
-
     "experience.event3.time": "Mar – May 2022",
     "experience.event3.title": "Merkle Inc. – Data Engineer",
     "experience.event3.bullet1":
       "Integración de Google Analytics, GTM y Adobe Analytics.",
-
     "experience.event4.time": "Sep 2021 – Feb 2022",
     "experience.event4.title": "Goo Apps – Software Engineering Intern",
     "experience.event4.bullet1":
       "Funciones en React Native y Symfony (Copesa Mobile).",
     "experience.event4.bullet2":
       "5k+ usuarios activos con optimizaciones de rendimiento.",
-
     "experience.event5.time": "Feb 2020 – Jun 2021",
     "experience.event5.title": "CTIC Foundation – Software Dev Intern",
     "experience.event5.bullet1":
       "Aplicaciones embebidas en Python/PyQt (+30% automatización).",
     "experience.event5.bullet2":
       "Módulos web en Node.js/React y proyectos en Spring Java.",
-
     "experience.event6.time": "Sep 2019 – Feb 2020",
     "experience.event6.title": "University of Oviedo – Intern",
     "experience.event6.bullet1": "Administración de sistemas y redes.",
@@ -171,6 +178,7 @@ const translations = {
   },
 };
 
+// Internationalization
 function applyTranslations(lang) {
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -196,15 +204,15 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
   });
 });
 
+// Routing
 const views = document.querySelectorAll(".view");
 const navLinks = document.querySelectorAll(".nav-link");
 
 function router() {
   const hash = window.location.hash || "#/";
+
+  // Hide all views
   views.forEach((v) => v.classList.add("hidden"));
-  document
-    .querySelectorAll(".route-anim")
-    .forEach((el) => el.classList.remove("route-anim"));
 
   let targetView;
   switch (hash) {
@@ -220,75 +228,74 @@ function router() {
     case "#/contact":
       targetView = "#view-contact";
       break;
+    case "#/admin":
+      targetView = "#view-admin";
+      break;
     default:
       targetView = "#view-home";
   }
 
   const viewEl = document.querySelector(targetView);
-  viewEl.classList.remove("hidden");
+  if (viewEl) {
+    viewEl.classList.remove("hidden");
+    // Refresh AOS when view changes
+    setTimeout(() => {
+      AOS.refresh();
+    }, 100);
+  }
 
-  gtag("event", "page_view", {
-    page_path: window.location.hash,
-    page_title: document.title,
-  });
-
+  // Update Active Nav Link
   navLinks.forEach((link) => link.classList.remove("active"));
   const activeLink = document.querySelector(`nav a[href="${hash}"]`);
   if (activeLink) activeLink.classList.add("active");
 
-  const animItems = viewEl.querySelectorAll(":scope > *");
-  animItems.forEach((item, i) =>
-    setTimeout(() => item.classList.add("route-anim"), i * 100)
-  );
-
-  if (hash === "#/projects") {
-    const cards = viewEl.querySelectorAll(".card");
-    cards.forEach((card, i) =>
-      setTimeout(
-        () => card.classList.add("route-anim"),
-        (i + animItems.length) * 100
-      )
-    );
+  // Google Analytics Event
+  if (typeof gtag === 'function') {
+    gtag("event", "page_view", {
+      page_path: window.location.hash,
+      page_title: document.title,
+    });
   }
 
-  if (hash === "#/experience") {
-    const events = viewEl.querySelectorAll(".timeline .event");
-    events.forEach((ev, i) =>
-      setTimeout(
-        () => ev.classList.add("route-anim"),
-        (i + animItems.length) * 100
-      )
-    );
-  }
-
-  if (hash === "#/contact") {
-    const cards = viewEl.querySelectorAll(".contact-card");
-    cards.forEach((card, i) =>
-      setTimeout(
-        () => card.classList.add("route-anim"),
-        (i + animItems.length) * 100
-      )
-    );
+  // Close mobile menu if open
+  const nav = document.getElementById("main-nav");
+  const btn = document.querySelector(".mobile-menu-btn");
+  if (nav.classList.contains("active")) {
+    nav.classList.remove("active");
+    btn.classList.remove("active");
   }
 }
 
 window.addEventListener("hashchange", () => {
   router();
-  applyTranslations(window.currentLang);
+  applyTranslations(window.currentLang || "es");
 });
+
 window.addEventListener("load", () => {
   window.currentLang = "es";
   applyTranslations(window.currentLang);
   router();
 });
 
+// Mobile Menu
+const mobileBtn = document.querySelector(".mobile-menu-btn");
+const mainNav = document.getElementById("main-nav");
+
+if (mobileBtn) {
+  mobileBtn.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
+    mobileBtn.classList.toggle("active");
+  });
+}
+
+// Modal Logic
 const modal = document.getElementById("project-modal");
 const backdrop = modal.querySelector(".modal-backdrop");
 const btnClose = modal.querySelector(".modal-close");
 const titleEl = document.getElementById("modal-title");
 const textEl = document.getElementById("modal-text");
 
-document.querySelectorAll("#view-projects button.card").forEach((card) => {
+document.querySelectorAll(".project-card").forEach((card) => {
   card.addEventListener("click", () => {
     titleEl.innerText = card.dataset.title;
     textEl.innerText = card.dataset.text;
@@ -300,10 +307,105 @@ function closeModal() {
   modal.classList.add("hidden");
 }
 
-btnClose.addEventListener("click", closeModal);
-backdrop.addEventListener("click", closeModal);
+if (btnClose) btnClose.addEventListener("click", closeModal);
+if (backdrop) backdrop.addEventListener("click", closeModal);
+
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
 });
+
+// Firebase Logic
+const firebaseConfig = {
+  apiKey: "AIzaSyDB2GV4nS6oil8RpB5FejqHPRNlyU8D-zI",
+  authDomain: "ppalacio-website.firebaseapp.com",
+  projectId: "ppalacio-website",
+  storageBucket: "ppalacio-website.firebasestorage.app",
+  messagingSenderId: "915653259932",
+  appId: "1:915653259932:web:c2a2c334825ba21e05b359",
+  measurementId: "G-7JCXGYDW8S"
+};
+
+// Initialize Firebase
+let auth;
+try {
+  const app = window.firebase.initializeApp(firebaseConfig);
+  auth = window.firebase.getAuth(app);
+} catch (error) {
+  console.error("Firebase init error (expected if config is placeholder):", error);
+}
+
+const loginBtn = document.getElementById("login-btn");
+const logoutBtn = document.getElementById("logout-btn");
+const userProfile = document.getElementById("user-profile");
+const userAvatar = document.getElementById("user-avatar");
+const adminLink = document.getElementById("admin-link"); // Keep for hero button if exists
+const navAdminLink = document.getElementById("nav-admin-link");
+const adminView = document.getElementById("view-admin");
+
+// Allowed email
+const ALLOWED_EMAIL = "pedropalacioestrada@gmail.com";
+
+if (auth) {
+  loginBtn.addEventListener("click", () => {
+    const provider = new window.firebase.GoogleAuthProvider();
+    window.firebase.signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log("Logged in:", result.user);
+      })
+      .catch((error) => {
+        console.error("Login error:", error);
+        alert("Error logging in: " + error.message);
+      });
+  });
+
+  logoutBtn.addEventListener("click", () => {
+    window.firebase.signOut(auth).then(() => {
+      console.log("Logged out");
+      window.location.hash = "#/";
+    });
+  });
+
+  window.firebase.onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in
+      loginBtn.classList.add("hidden");
+      userProfile.classList.remove("hidden");
+      userAvatar.src = user.photoURL;
+
+      if (user.email === ALLOWED_EMAIL) {
+        if (adminLink) adminLink.classList.remove("hidden");
+        if (navAdminLink) navAdminLink.classList.remove("hidden");
+      } else {
+        if (adminLink) adminLink.classList.add("hidden");
+        if (navAdminLink) navAdminLink.classList.add("hidden");
+        // If currently on admin page, redirect
+        if (window.location.hash === "#/admin") {
+          window.location.hash = "#/";
+        }
+      }
+    } else {
+      // User is signed out
+      loginBtn.classList.remove("hidden");
+      userProfile.classList.add("hidden");
+      if (adminLink) adminLink.classList.add("hidden");
+      if (navAdminLink) navAdminLink.classList.add("hidden");
+
+      if (window.location.hash === "#/admin") {
+        window.location.hash = "#/";
+      }
+    }
+  });
+} else {
+  console.warn("Firebase Auth not initialized. Check configuration.");
+  // Mock for testing UI if needed (commented out)
+  /*
+  loginBtn.addEventListener("click", () => {
+     loginBtn.classList.add("hidden");
+     userProfile.classList.remove("hidden");
+     adminLink.classList.remove("hidden");
+     userAvatar.src = "https://via.placeholder.com/32";
+  });
+  */
+}
